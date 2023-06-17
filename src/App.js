@@ -57,7 +57,7 @@ function App() {
 
         for (const objFuncId in objFuncValues[0]) {
             if (objFuncValues[0][objFuncId] === "")
-                objFuncValues[0][objFuncId] = Math.random() * (10000 + 10000) - 10000;
+                objFuncValues[0][objFuncId] = 1;
         }
 
         objFuncValues.push([]);
@@ -103,7 +103,7 @@ function App() {
                 if (condVal[0][condId][varId] !== "")
                     condVal[0][condId][varId] = Number(condVal[0][condId][varId]);
                 if (!condVal[0][condId][varId])
-                    condVal[0][condId][varId] = Math.random() * (10000 + 10000) - 10000;
+                    condVal[0][condId][varId] = 1;
             }
         }
     }
