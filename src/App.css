@@ -1,38 +1,227 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+.App{
+  font-size: 18px;
+}
+
+[class*="_container"] {
+  /*max-width: 1024px;*/
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 15px 10px;
+  background-color: #17b475;
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page {
+  flex: 1 1 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputBlock {
+  /*background-color: #d7d7d7;*/
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputBlock_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+}
+.mainParams{
+  display: flex;
+  align-items: center;
+  column-gap: 45px;
+  margin: 35px 0 20px;
+}
+.mainParamsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainParams__caption{
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.mainParamInput{
+
 }
 
-.App-link {
-  color: #61dafb;
+.objectFunctionBlock, .conditionsBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputBlock__caption {
+  margin: 15px 0;
+  font-weight: normal;
 }
+
+.objectFunction {
+  display: flex;
+  gap: 10px;
+}
+
+sub {
+  font-size: 12px;
+}
+
+.inputBlock__input, .mainParamInput {
+  background-color: rgba(215, 215, 215, 0.38);
+  border-width: 0;
+  border-bottom: 2px solid #0e2cc5;
+  padding: 4px 6px;
+  text-align: center;
+}
+.mainParamInput{
+  width: 70px;
+}
+.inputBlock__input{
+  width: 55px;
+}
+
+.conditionsBlock {
+  margin-bottom: 40px;
+}
+
+.conditionsSystem {
+  display: flex;
+  gap: 10px;
+}
+
+.bracket {
+  background: url("../public/figured_bracket.png") no-repeat 50%;
+  background-size: contain;
+  width: 45px;
+}
+
+.figuredBracketImg {
+  width: 35px;
+  height: 0;
+}
+
+.conditions {
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.condition {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fraction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.fraction__part{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.numerator {
+  border-bottom: 1px solid #000000;
+}
+
+.inputError{
+  display: none;
+  color: #f00;
+}
+
+.calculateBtnBlock {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.calculateBtn {
+  width: 100%;
+  border: none;
+  background-color: #3a3dff;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  transition: background-color 300ms;
+}
+
+.calculateBtn:hover {
+  cursor: pointer;
+  background-color: #0001d9;
+}
+.outputBlock{
+  display: none;
+  margin: 25px 0;
+}
+.canonicalForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.simplexBlock{
+  margin-top: 65px;
+}
+.tables{
+  text-align: center;
+}
+
+.table{
+  margin: 10px auto 45px;
+  border-collapse: collapse;
+}
+.cell{
+  border: 1px solid #000;
+  text-align: center;
+  padding: 8px 15px;
+}
+.directedCell{
+  color: #0e2cc5;
+}
+.italic{
+  font-style: italic;
+}
+.notDirected{
+  display: none;
+}
+/*.directedRow{*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*}*/
+.directedRowSpan{
+  display: block;
+}
+.directedElem{
+  background-color: #ff7777;
+}
+.answerBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result{
+  min-width: 280px;
+}
+.result__p{
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
